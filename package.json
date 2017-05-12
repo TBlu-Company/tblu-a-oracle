@@ -28,6 +28,7 @@
     "npm": ">= 4.0.0"
   },
   "dependencies": {
+    "node-gyp": "^3.6.1",
     "oracledb": "^1.13.0"
   }
 }
