@@ -28,6 +28,7 @@
     "npm": ">= 4.0.0"
   },
   "dependencies": {
+    "lodash": "^4.17.4",
     "node-gyp": "^3.6.1",
     "oracledb": "^1.13.0"
   }
