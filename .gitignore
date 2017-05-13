@@ -53,4 +53,4 @@ dist
 .yarn-integrity
 
 # Oracle Libs
-oracle
+/oracle
