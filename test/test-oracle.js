@@ -6,44 +6,31 @@ const dBconfig = new Datastore(dirname + '/config.db');
 dBconfig.loadDatabase();
 const core = require('../index.js');
 
-describe('oracleSimpleQuery', function() {
-  it('get oracleSimpleQuery', function(done) {
-    let data = {};
-    data['moduleFunction'] = "oracleSimpleQuery";
-    core.run(data).then(result => {
-      console.log(result);
-      done();
-    }).catch(error => {
-      done(error);
-    });
-  });
-});
-describe('oracleSimpleQuery', function() {
-  it('get oracleSimpleQuery', function(done) {
-    let data = {};
-    data['moduleFunction'] = "oracleSimpleQuery";
-    core.run(data).then(result => {
-      console.log(result);
-      done();
-    }).catch(error => {
-      done(error);
-    });
-  });
-});
-describe('oracleSimpleQuery', function() {
-  it('get oracleSimpleQuery', function(done) {
-    let data = {};
-    data['moduleFunction'] = "oracleSimpleQuery";
-    core.run(data).then(result => {
-      console.log(result);
-      done();
-    }).catch(error => {
-      done(error);
-    });
-  });
-});
 
 
+describe('oracleSimpleQuery', function() {
+  it('get oracleSimpleQuery', function(done) {
+    let data = {
+      parameters: {
+        dataBase: {
+          user: 'oracle_ocm',
+          password: 'paulo',
+          connectString: '(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST = 192.168.40.147)(PORT = 1521))(CONNECT_DATA=(SERVER = DEDICATED)(SERVICE_NAME = UPGR)))',
+          uuid: '2ae03895-01c5-4342-abfb-797f2ae425d7'
+        },
+        query: "SELECT * FROM TABLE1",
+        queryParameters: {}
+      }
+    };
+    data['moduleFunction'] = "oracleSimpleQuery";
+    core.run(data).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
+});
 
 // 'use strict';
 // const Datastore = require('nedb');
